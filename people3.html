@@ -3,26 +3,32 @@
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>	
 </head>
 
 <style type="text/css">
-	.nav1 > .active{
-		background-color: #006699;
-	
+
+
+
+	.navbar-collapse{
+		background-color: #f1f1f1;
 	}
-	.nav1 .active > a{
+	.navbar-nav > .active{
+		background-color: #006699;
+
+	}
+	.navbar-nav .active > a{
 		color: white;
 	}
-	.nav1 > li > a{
+	.navbar-nav > li > a{
 		color: grey;
 	}
 	
-	.nav1 > li:hover a{
+	.navbar-nav > li:hover a{
 		color: white;
 		background-color: grey;
 	}
@@ -36,21 +42,68 @@
 		overflow-y: auto;
 	}
 
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+		background-color: #006699;
+		border: none;
+		color: white;
+		outline: none;
+	}
+	.nav-tabs{
+		border: none;
+		padding: 0;
+		background-color: #f1f1f1;
+		
+
+	} 
+	.nav-tabs > li{
+		border:
+	}
+	.nav-tabs > li > a{
+		border-radius: 0;
+		margin: 0;
+		color: grey;
+	}
+	.nav-stacked > li + li + li{
+		margin: 0;
+		
+	}
+	.nav-stacked > li + li{
+		margin: 0;
+		border-top: none;
+	}
+	.nav-tabs{
+		border: none;
+	}
+
+	.aq::after{
+		content: '';
+		display: block;
+		width: 0;
+		height: 2px;
+		background:#2d6699;
+		transition: width .3s;
+	}
+
+	.aq:hover::after{
+		width: 90%;
+		transition: width .3s;
+	}
+
 	/* Month header */
 	.month {
-	    padding: 0px;
-	    margin: 0;
-	    width: 100%;
-	    background: #006699;
-	    color: white;
-	    text-align: center;
-	    position: relative;
+		padding: 0px;
+		margin: 0;
+		width: 100%;
+		background: #006699;
+		color: white;
+		text-align: center;
+		position: relative;
 	}
 
 	/* Month list */
 	.month ul {
-	    margin: 0;
-	    padding: 0;
+		margin: 0;
+		padding: 0;
 	}
 
 	.month h3,.month h4{
@@ -61,56 +114,56 @@
 	/* Previous button inside month header */
 	.month .prev {
 		position: absolute;
-	  top: 30%;
-	 cursor: pointer;
-	    left: 20px;
-	    
+		top: 30%;
+		cursor: pointer;
+		left: 20px;
+
 	}
 
 	/* Next button */
 	.month .next {
 		position: absolute;
-	  top: 30%;
-	 cursor: pointer;
-	    right: 20px;
+		top: 30%;
+		cursor: pointer;
+		right: 20px;
 	}
 
 	/* Weekdays (Mon-Sun) */
 	.weeks {
-	    margin: 0;
-	    padding: 10px 0;
-	    background-color:#006699;
+		margin: 0;
+		padding: 10px 0;
+		background-color:#006699;
 	}
 
 	.weeks li {
-	    display: inline-block;
-	    width: 13%;
-	    color: white;
-	    text-align: center;
-	    padding: 0;
-	    margin: 0;
+		display: inline-block;
+		width: 13%;
+		color: white;
+		text-align: center;
+		padding: 0;
+		margin: 0;
 	}
 
 	/* Days (1-31) */
 	.days {
-	   
-	    margin: 0;
-	    padding: 10px 0;
-	    background-color:#006699;
+
+		margin: 0;
+		padding: 10px 0;
+		background-color:#006699;
 	}
 
 	.days li {
-	    
-	   display: inline-block;
-	    width: 14.2%;
-	    color: white;
-	    text-align: center;
-	    padding: 0;
-	    margin: 0;
+
+		display: inline-block;
+		width: 14.2%;
+		color: white;
+		text-align: center;
+		padding: 0;
+		margin: 0;
 	}
 
 	.month .next:hover,.month .prev:hover{
-	  background-color: rgba(0,0,0,.2);
+		background-color: rgba(0,0,0,.2);
 	}
 	.weeks li:hover{
 		background-color: rgba(0,0,0,.2);
@@ -120,76 +173,58 @@
 	}
 
 
+
 </style>
-<body>
+<body >
 	<!-- Social media row -->
 	<div class="container-fluid" style="background-color: #505050; ">
-				<div class="container">
-				
-					<ul class="list-inline pull-right" style="margin: 0;">
-						<li><a href="https://plus.google.com/communities/118068556925597419957"><img class="img-responsive" src="images/google.png">	</a></li>
-						<li><a href=""><img class="img-responsive" src="images/twitter.png">	</a></li>
-						<li><a href=""><img class="img-responsive" src="images/facebook.png">	</a></li>
-						<li><a href=""><img class="img-responsive" src="images/youtube.png">	</a></li>
-					</ul>
-				</div>
+		<div class="container">
+
+			<ul class="list-inline pull-right" style="margin: 0;">
+				<li><a href="https://plus.google.com/communities/118068556925597419957"><img class="img-responsive" src="images/google.png">	</a></li>
+				<li><a href=""><img class="img-responsive" src="images/twitter.png">	</a></li>
+				<li><a href=""><img class="img-responsive" src="images/facebook.png">	</a></li>
+				<li><a href=""><img class="img-responsive" src="images/youtube.png">	</a></li>
+			</ul>
+		</div>
 	</div>
 	<div class="container">
-			<!-- logo and department name -->
-			<div class="row" >
-				<div class="col-lg-2">
-					<img class="pull-right img-thumbnail img-responsive" src="images/logo.png" style="border:none; ">
-				</div>
-				<div class="col-lg-10">
-					<br><br>
-					<h1 class="text-left text1" style="color: #006699;font-weight: bold;font-family: 'Oswald', sans-serif;">Department of Electronics and <br>Communication</h1>
-					<style type="text/css">
-						h1{
-							padding-top: -10px !important;
-						}
-					</style>
+		<!-- logo and department name -->
+		<div class="row" >
+			<div class="col-lg-2">
+				<img class="pull-right img-thumbnail img-responsive" src="images/logo.png" style="border:none; ">
+			</div>
+			<div class="col-lg-10">
+				<br><br>
+				<h1 class="text-left" style="color: #006699;font-weight: bold;font-family: 'Oswald', sans-serif;">Department of Electronics and <br>Communication</h1>
+			</div>
+		</div>
 
-					</style>
-				</div>
+		
+		<!-- navigation bar -->
+		<div class=" navbar-static">
+			<div class="navbar-header">
+				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 			</div>
 
-		    <div class="container-fluid " style="background:#f1f1f1 ; padding-left: 0px;">
-		    	
-		    	
-			<!-- navigation bar -->
-		   		<div class=" navbar-static">
-	 				<div class="navbar-header">
-						<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-		            	</button>
-		            </div>
+			<div id="navbarCollapse" class="collapse navbar-collapse" style="padding:0;">
+				<ul class="nav navbar-nav">
+					<li ><a  href="home.html">Home</a></li>
+					<li><a href="students.html">Students</a></li>
+					<li><a href="people.html">People</a></li> 
+					<li class="active"><a href="academics.html">Academics</a></li> 
+					<li><a href="#">News</a></li> 
+					<li><a href="#">Alumini</a></li> 
+				</ul>
+			</div>
 
-		           	<div id="navbarCollapse" class="collapse navbar-collapse" style="padding:0;">
-			            <ul class="nav navbar-nav nav1">
-			                <li><a href="home.html">Home</a></li>
-			                <li ><a href="students.html">Students</a></li>
-							<li class="active"><a href="people.html">People</a></li> 
-			                <li><a href="academics.html">Academics</a></li> 
-			                <li><a href="#">News</a></li> 
-			                <li><a href="#">Alumni</a></li> 
-		                </ul>
-					 </div>
-
-		  		</div>
-		  	</div>	
-
-
-
-	
-
-	
-	
-
-
-
-	<div class="container ">
+		</div>
+	</div>
+<div class="container ">
 		<div class="row" style="padding-right: 255px;">
 			<!-- <div class="col-lg-3" style="height: 300px; background-color: #f2f2f2; padding-right: 100px;"></div> -->
 				<ul class="nav nav-tabs nav-stacked col-lg-3 pills1 " style="padding-right: 50px;background-color: #f2f2f2; height: 300px; padding-top: 10px; padding-bottom: 520px;" >
